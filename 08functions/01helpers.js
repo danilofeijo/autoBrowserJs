@@ -4,19 +4,18 @@
  * http://todomvc.com/examples/vanillajs/#/
  *
  *
- * All you have to do is:
- *  - Open url above in your chrome browser
- *  - Open the Sources tab from Chrome devtools
- *  - Create a new snippet
- *  - Add these functions in your new snippet
- *  - Run snippet (Ctrl+Enter)
- *  - Go to the Console tab from Chrome devtools
- *  - Choose function from your snippet and call it in the Console tab
+ * This is all you have to do:
+ *  - Open VanillaJs url in your chrome browser
+ *  - Open Chrome devtools
+ *  -- Go to Sources tab and create a new snippet 
+ *  -- Add below functions in the new snippet
+ *  -- Run snippet (Ctrl+Enter)
+ *  -- Go to Console tab and call one of available functions
  *
  */
 
 /**
- * About Todo Items
+ * Actions for todos
  */
 
 //  Click item
@@ -31,54 +30,76 @@ function toggleAll() {
 
 //  Toggle a todo
 function toggleItemX(x) {
-  document.querySelector('ul.todo-list > li:nth-child(' + x + ') input.toggle').click();
+  document
+    .querySelector('ul.todo-list > li:nth-child(' + x + ') input.toggle')
+    .click();
+}
+
+// Delete an todo
+function deleteItemX(x) {
+  document
+    .querySelector('ul.todo-list > li:nth-child(' + x + ') button.destroy')
+    .click();
+}
+
+// Clear completed todos
+function clearCompleted() {
+  document.querySelector('button.clear-completed').click();
 }
 
 /**
- * Continue here
- */
-
-// Delete an todo
-document.querySelector('ul.todo-list > li:nth-child(1) button.destroy').click();
-
-// Clear completed todos
-document.querySelector('button.clear-completed').click();
-
-/**
- * About Filter Todos
+ * Filters
  */
 
 // Show completed todos
-location.hash = '/completed';
+function filterCompleted() {
+  location.hash = '/completed';
+}
 
 // Show all todos
-location.hash = '/';
+function filterAll() {
+  location.hash = '/';
+}
 
 // Show active todos
-location.hash = '/active';
+function filterActive() {
+  location.hash = '/active';
+}
 
 /**
- * About little bit more complex actions
+ * More complex actions
  */
 
 // Create new todo
-document.querySelector('input.new-todo').value = 'Hello World!';
-document.querySelector('input.new-todo').dispatchEvent(
-  new Event('change', {
-    bubbles: true
-  })
-);
+function createTodo(textValue) {
+  document
+    .querySelector('input.new-todo')
+    .value = textValue;
+
+  document
+    .querySelector('input.new-todo')
+    .dispatchEvent(
+      new Event('change', {
+        bubbles: true
+      })
+    );
+}
 
 // Edit todo
-document
-  .querySelector('ul.todo-list > li:nth-child(1) > div > label')
-  .dispatchEvent(
-    new Event('dblclick', {
-      bubbles: true
-    })
-  );
-document.querySelector('ul.todo-list > li:nth-child(1) .edit').value =
-  'Hello World!';
-document
-  .querySelector('ul.todo-list > li:nth-child(1) .edit')
-  .dispatchEvent(new Event('blur'));
+function amendTodo(x, amendValue) {
+  document
+    .querySelector('ul.todo-list > li:nth-child(' + x + ') > div > label')
+    .dispatchEvent(
+      new Event('dblclick', {
+        bubbles: true
+      })
+    );
+
+  document
+    .querySelector('ul.todo-list > li:nth-child(' + x + ') .edit')
+    .value = amendValue;
+    
+  document
+    .querySelector('ul.todo-list > li:nth-child(' + x + ') .edit')
+    .dispatchEvent(new Event('blur'));
+}
