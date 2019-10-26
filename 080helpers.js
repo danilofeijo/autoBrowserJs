@@ -8,7 +8,7 @@
  *  - Open VanillaJs url in your chrome browser
  *  - Open Chrome devtools
  *  -- Go to Sources tab and create a new snippet 
- *  -- Add below functions in the new snippet
+ *  -- Add below functions in the created snippet
  *  -- Run snippet (Ctrl+Enter)
  *  -- Go to Console tab and call one of available functions
  *
