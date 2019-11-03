@@ -32,6 +32,7 @@ javascrip: (function() {
 })()
 
 /**
- * Currently I'm not able to run these code as a bookmarklet
+ * Currently I'm not able to run these code as a bookmarklet.
+ * 
  * These codes have been worked only if you run them on the browser DevTools :(
  */
