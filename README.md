@@ -1,11 +1,11 @@
-# autoBrowserJs
-Code and notes about How to Automate things in the Browser.
+# Testing Journey
+Nice code and notes about software testing/quality.
 
-All content here was raised after [Automating in the Browser Using JavaScript course][1] created by [Alan Richardson][2] (aka Evil Tester) which is available on [TAU][3].
+## Web Testing
+- [x] Course: [Automating in the Browser Using JavaScript course][1]
 
-Try it!
 
+Inspired by [Adriano Tanoue's repo][2]
 <!-- Links list -->
-[1]: https://testautomationu.applitools.com/automating-in-the-browser-using-javascript/
-[2]: https://twitter.com/eviltester
-[3]: https://testautomationu.applitools.com/
+[1]: /automating-in-the-browser-using-javascript
+[2]: https://github.com/nu75h311/learning-resources
