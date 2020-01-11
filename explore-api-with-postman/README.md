@@ -5,6 +5,8 @@ This content was created after take the [Exploring Service APIs through Test Aut
 
 Try it!
 
+![Postman Logo](https://blog.getpostman.com/wp-content/uploads/2014/07/logo.png)
+
 <!-- Links list -->
 [1]: https://testautomationu.applitools.com/exploring-service-apis-through-test-automation/
 [2]: https://twitter.com/ambertests

@@ -5,6 +5,8 @@ This content was created after take the [Automating in the Browser Using JavaScr
 
 Try it!
 
+![Chrome Devtools Logo](https://developers.google.com/web/tools/images/chrome-devtools-16x9.png)
+
 <!-- Links list -->
 [1]: https://testautomationu.applitools.com/automating-in-the-browser-using-javascript/
 [2]: https://twitter.com/eviltester
