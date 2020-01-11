@@ -1,0 +1,84 @@
+{
+	"info": {
+		"_postman_id": "2b214329-60bb-4f70-815c-2e5d36ad01ee",
+		"name": "Data Driven Test",
+		"schema": "https://schema.getpostman.com/json/collection/v2.1.0/collection.json"
+	},
+	"item": [
+		{
+			"name": "Create Booking",
+			"event": [
+				{
+					"listen": "prerequest",
+					"script": {
+						"id": "2ad02987-8ab7-4f27-a0de-33a690f8e5ce",
+						"exec": [
+							""
+						],
+						"type": "text/javascript"
+					}
+				},
+				{
+					"listen": "test",
+					"script": {
+						"id": "8e124840-0700-48d2-9974-f19e04099012",
+						"exec": [
+							"const responseData = pm.response.json();",
+							"",
+							"const expectedFirstName = pm.variables.get(\"firstName\");",
+							"const expectedLastName = pm.variables.get(\"lastName\");",
+							"",
+							"",
+							"pm.test(\"Status code is 200\", function () {",
+							"    pm.response.to.have.status(200);",
+							"});",
+							"",
+							"pm.test(\"Check first name\" + expectedFirstName, function () {",
+							"    pm.expect(responseData.booking.firstname).to.eql(expectedFirstName);",
+							"});",
+							"",
+							"pm.test(\"Check last name\" + expectedLastName, function () {",
+							"    pm.expect(responseData.booking.lastname).to.eql(expectedLastName);",
+							"});"
+						],
+						"type": "text/javascript"
+					}
+				}
+			],
+			"request": {
+				"auth": {
+					"type": "noauth"
+				},
+				"method": "POST",
+				"header": [
+					{
+						"key": "Content-Type",
+						"name": "Content-Type",
+						"value": "application/json",
+						"type": "text"
+					}
+				],
+				"body": {
+					"mode": "raw",
+					"raw": "{\n    \"firstname\" : \"Lorem\",\n    \"lastname\" : \"Ipsum\",\n    \"totalprice\" : 111,\n    \"depositpaid\" : true,\n    \"bookingdates\" : {\n        \"checkin\" : \"2018-01-01\",\n        \"checkout\" : \"2019-01-01\"\n    },\n    \"additionalneeds\" : \"Breakfast\"\n}",
+					"options": {
+						"raw": {
+							"language": "json"
+						}
+					}
+				},
+				"url": {
+					"raw": "{{rb_url}}/booking",
+					"host": [
+						"{{rb_url}}"
+					],
+					"path": [
+						"booking"
+					]
+				}
+			},
+			"response": []
+		}
+	],
+	"protocolProfileBehavior": {}
+}
