@@ -9,6 +9,7 @@ Nice code and notes about software testing/quality.
 
 ## API
 - Course \[Js\] : [Exploring Service APIs through Test Automation][4]
+- Course \[Js\] : [Testes de aplicações modernas com Cypress][5]
 
 This repo is an inspiration from [Adriano Tanoue's repo][1].
 
@@ -17,3 +18,4 @@ This repo is an inspiration from [Adriano Tanoue's repo][1].
 [2]: https://www.amazon.com.br/Agile-Testing-Practical-Addison-Wesley-Signature-ebook/dp/B001QL5N4K
 [3]: /automating-in-the-browser
 [4]: /explore-api-with-postman
+[5]: https://github.com/danilofeijo/cypress-lab-2
