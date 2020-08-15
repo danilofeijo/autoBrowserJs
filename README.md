@@ -6,10 +6,10 @@ Nice code and notes about software testing/quality.
 
 ## Web
 - Course \[Js\] : [Automating in the Browser Using JavaScript course][3]
+- Course \[Js\] : [Testes de aplicações modernas com Cypress][5]
 
 ## API
 - Course \[Js\] : [Exploring Service APIs through Test Automation][4]
-- Course \[Js\] : [Testes de aplicações modernas com Cypress][5]
 
 This repo is an inspiration from [Adriano Tanoue's repo][1].
 
